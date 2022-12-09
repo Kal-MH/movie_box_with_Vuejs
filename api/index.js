@@ -10,8 +10,7 @@ export default async function handler(req, res) {
   if (i) {
     queryString = `&${i ? `i=${i}` : ''}`;
   } else {
-    queryString = `&s=${s}${type ? `&type=${type}` : ''}
-             ${y ? `&y=${y}` : ''}`;
+    queryString = `&s=${s}${type ? `&type=${type}` : ''}${y ? `&y=${y}` : ''}`;
   }
 
   const response = await fetch(
