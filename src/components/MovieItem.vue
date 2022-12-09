@@ -1,7 +1,7 @@
 <template>
   <div class="movie-container">
     <div class="movie-container__img" @click="fetchMovieById">
-      <img :src="movie.Poster" />
+      <img v-if="movie.Poster !== 'N/A'" :src="movie.Poster" />
     </div>
     <div class="movie-container__title">
       <span class="title__title">{{ movie.Title }}</span>
@@ -53,6 +53,7 @@ export default {
   &__img {
     width: 100%;
     height: 80%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
 
     img {
       width: 100%;

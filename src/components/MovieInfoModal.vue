@@ -71,7 +71,7 @@ export default {
 
       return `background-image: 
         linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), 
-        url(${imgUrl});`;
+        url(${imgUrl || ''});`;
     },
   },
   watch: {
@@ -105,10 +105,13 @@ export default {
   bottom: 0;
   padding: 4rem 12rem;
   background-color: $background2;
+  display: flex;
+  justify-content: center;
 
   &__inner {
     width: 100%;
     height: 100%;
+    max-width: 980px;
     border-radius: 10px;
     background-repeat: no-repeat;
     background-position: top;
