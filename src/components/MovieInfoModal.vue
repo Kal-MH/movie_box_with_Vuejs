@@ -17,7 +17,9 @@
               </div>
             </div>
             <div class="award-container">
-              <span>{{ selectedMovie.Awards || '' }}</span>
+              <span>{{
+                selectedMovie.Awards !== 'N/A' ? selectedMovie.Awards : ''
+              }}</span>
             </div>
           </div>
           <div class="content__left-container">
