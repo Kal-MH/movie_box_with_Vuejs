@@ -54,11 +54,13 @@ export default {
     width: 100%;
     height: 80%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
+    border-radius: 10px;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 10px;
 
       &:hover {
         filter: brightness(0.4);
