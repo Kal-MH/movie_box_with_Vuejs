@@ -5,18 +5,19 @@ const API_KEY = process.env.API_KEY;
 
 export default async function handler(req, res) {
   const { i, s, type, y } = req.query;
-  let url = `${API_END_POINT}?apikey=${API_KEY}`;
+  let queryString = '';
 
   if (i) {
-    url = `${url}&${i ? `i=${i}` : ''}`;
+    queryString = `&${i ? `i=${i}` : ''}`;
   } else {
-    url = `${url}&s=${s}${type ? `&type=${type}` : ''}
+    queryString = `&s=${s}${type ? `&type=${type}` : ''}
              ${y ? `&y=${y}` : ''}`;
   }
 
-  console.log(url);
-  const response = await fetch(url);
-  console.log(response);
+  const response = await fetch(
+    `${API_END_POINT}?apikey=${API_KEY}${queryString}`,
+  );
+
   if (response.ok) {
     const data = await response.json();
     res.status(200).json(data);
