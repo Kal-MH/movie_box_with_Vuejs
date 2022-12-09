@@ -83,14 +83,18 @@ export default {
 
 const fetchData = async payload => {
   const { imdbID, title, type, year } = payload;
-  let url = '/api?';
+  let url = '/api';
 
   if (imdbID) {
-    url = `${url}${imdbID ? `i=${imdbID}` : ''}`;
+    url = `${url}?${imdbID ? `i=${imdbID}` : ''}`;
   } else {
-    url = `${url}s=${title}${type ? `&type=${type}` : ''}
+    url = `${url}?s=${title}${type ? `&type=${type}` : ''}
            ${year ? `&y=${year}` : ''}`;
   }
 
-  return await fetch(url).then(res => res.json());
+  const res = await fetch(url);
+
+  if (res.ok) {
+    return res.json();
+  }
 };

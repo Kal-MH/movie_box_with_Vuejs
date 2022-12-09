@@ -4,14 +4,14 @@ const API_END_POINT = process.env.API_END_POINT;
 const API_KEY = process.env.API_KEY;
 
 export default async function handler(req, res) {
-  const { imdbID, title, type, year } = req.query;
+  const { i, s, type, y } = req.query;
   let url = `${API_END_POINT}?apikey=${API_KEY}`;
 
-  if (imdbID) {
-    url = `${url}&${imdbID ? `i=${imdbID}` : ''}`;
+  if (i) {
+    url = `${url}&${i ? `i=${i}` : ''}`;
   } else {
-    url = `${url}&s=${title}${type ? `&type=${type}` : ''}
-             ${year ? `&y=${year}` : ''}`;
+    url = `${url}&s=${s}${type ? `&type=${type}` : ''}
+             ${y ? `&y=${y}` : ''}`;
   }
 
   const response = await fetch(url);
