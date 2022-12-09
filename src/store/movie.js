@@ -86,9 +86,9 @@ const fetchData = async payload => {
   let url = '/api?';
 
   if (imdbID) {
-    url = `${url}&${imdbID ? `i=${imdbID}` : ''}`;
+    url = `${url}${imdbID ? `i=${imdbID}` : ''}`;
   } else {
-    url = `${url}&s=${title}${type ? `&type=${type}` : ''}
+    url = `${url}s=${title}${type ? `&type=${type}` : ''}
            ${year ? `&y=${year}` : ''}`;
   }
 
