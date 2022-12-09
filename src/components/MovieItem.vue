@@ -52,7 +52,7 @@ export default {
 
   &__img {
     width: 100%;
-    height: 80%;
+    height: 262px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8));
     border-radius: 10px;
 
