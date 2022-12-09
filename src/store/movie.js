@@ -53,6 +53,7 @@ export default {
       checkTypeIsString(title);
 
       const movieListObj = await fetchData(payload);
+      console.log(movieListObj);
 
       if (movieListObj.Response === 'False') {
         commit('updateIsMovieApiCallFail', true);
@@ -93,6 +94,7 @@ const fetchData = async payload => {
   }
 
   const res = await fetch(url);
+  console.log(res);
 
   if (res.ok) {
     return res.json();
