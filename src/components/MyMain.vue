@@ -2,20 +2,17 @@
   <main class="main">
     <MovieList />
     <MovieInfoModal />
-    <Loading />
   </main>
 </template>
 
 <script>
 import MovieList from '~/components/MovieList';
 import MovieInfoModal from '~/components/MovieInfoModal';
-import Loading from '~/components/Loading';
 
 export default {
   components: {
     MovieList,
     MovieInfoModal,
-    Loading,
   },
 };
 </script>

@@ -41,14 +41,12 @@
         </div>
       </div>
     </div>
-    <Loading />
   </teleport>
 </template>
 
 <script>
 import { mapState } from 'vuex';
 import { storeModules } from '~/utils/constants';
-import Loading from '~/components/Loading';
 
 const {
   MOVIE: { NAME: MOVIE },
@@ -66,9 +64,6 @@ const KEYUP = 'keyup';
 const KEY_ESCAPE = 'Escape';
 
 export default {
-  components: {
-    Loading,
-  },
   computed: {
     ...mapState(MOVIE, [IS_MOVIE_CLICK, SELECTED_MOVIE]),
     background() {
