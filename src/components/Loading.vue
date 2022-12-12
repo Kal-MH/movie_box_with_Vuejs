@@ -39,7 +39,7 @@ export default {
   background-color: $font-color2;
 
   .v-pulse {
-    background-color: #5dc596;
+    background-color: $border;
     width: 15px;
     height: 15px;
     margin: 2px;
