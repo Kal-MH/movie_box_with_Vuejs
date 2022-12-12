@@ -20,10 +20,11 @@ export default {
 <style lang="scss" scoped>
 .header {
   max-width: $max-width;
+  min-width: $min-width;
   padding: 2rem 8rem;
   margin: 0 auto;
   border-bottom: 4px solid transparent;
-  border-image: linear-gradient(to right, #fff, $redpink, #fff);
+  border-image: linear-gradient(to right, #fff, $border, #fff);
   border-image-slice: 1;
   display: flex;
   flex-direction: column;

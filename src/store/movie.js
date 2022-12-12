@@ -15,6 +15,7 @@ export default {
   namespaced: true,
   state() {
     return {
+      isLoading: false,
       isMovieApiCallFail: false,
       apiCallErrorMsg: '',
       isMovieClick: false,
@@ -24,6 +25,10 @@ export default {
   },
   getters: {},
   mutations: {
+    updateIsLoading(state, value) {
+      console.log(value);
+      state.isLoading = value;
+    },
     updateIsMovieApiCallFail(state, value) {
       state.isMovieApiCallFail = value;
     },
@@ -52,7 +57,11 @@ export default {
 
       checkTypeIsString(title);
 
+      commit('updateIsLoading', true);
+
       const movieListObj = await fetchData(payload);
+
+      commit('updateIsLoading', false);
 
       if (movieListObj.Response === 'False') {
         commit('updateIsMovieApiCallFail', true);
@@ -67,7 +76,11 @@ export default {
 
       checkTypeIsString(imdbID);
 
+      commit('updateIsLoading', true);
+
       const movie = await fetchData(payload);
+
+      commit('updateIsLoading', false);
 
       if (movie.Response === 'False') {
         commit('updateIsMovieApiCallFail', true);

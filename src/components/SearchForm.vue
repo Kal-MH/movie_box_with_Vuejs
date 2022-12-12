@@ -81,7 +81,7 @@ export default {
   width: 80%;
   border-radius: 40px;
   display: flex;
-  color: $color;
+  color: $font-color;
   background-color: $background;
 
   &__input {
@@ -110,7 +110,7 @@ export default {
       padding-left: 10px;
       max-width: 70px;
       flex-grow: 1;
-      border-left: 2px solid $white;
+      border-left: 2px solid $font-color2;
       outline: none;
 
       &::-webkit-scrollbar {
@@ -126,8 +126,8 @@ export default {
 
   button {
     padding: 12px 24px;
-    background-color: $redpink;
-    color: white;
+    background-color: $border;
+    color: $font-color2;
     border-radius: 30px;
   }
 }

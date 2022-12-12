@@ -2,6 +2,7 @@ export const storeModules = {
   MOVIE: {
     NAME: 'movie',
     STATE: {
+      IS_LOADING: 'isLoading',
       IS_MOVIE_API_CALL_FAIL: 'isMovieApiCallFail',
       API_CALL_ERROR_MSG: 'apiCallErrorMsg',
       IS_MOVIE_CLICK: 'isMovieClick',
@@ -9,6 +10,7 @@ export const storeModules = {
       MOVIELIST: 'movieList',
     },
     MUTATIONS: {
+      UPDATE_IS_LOADING: 'updateIsLoading',
       UPDATE_IS_MOVIE_API_CALL_FAIL: 'updateIsMovieApiCallFail',
       UPDATE_API_CALL_ERROR_MSG: 'updateApiCallErrorMsg',
       UPDATE_IS_MOVIE_CLICK: 'updateIsMovieClick',
