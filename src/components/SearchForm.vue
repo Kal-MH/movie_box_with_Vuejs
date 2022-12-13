@@ -79,6 +79,7 @@ export default {
 .header__search-form {
   padding: 0.75rem 2rem 0.55rem 4rem;
   width: 80%;
+  align-self: flex-start;
   border-radius: 40px;
   display: flex;
   color: $font-color;
